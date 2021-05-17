@@ -3,12 +3,12 @@ preferred nickname: n/a
 Canvas section: 51959
 physical location: SF Bay Area
 Three things you value:
-    1) I earned some moeny from stock market at last year
+    1) I earned some money from stock market at last year
     2) I quit a heavy workload job and back to school
-    3) I donated some moeny to help people who have hard time during the covid-1       9 period
-life goal that Align program may help achieve: I want to become a full stack engeneer
+    3) I donated some money to help people who have hard time during the covid-19 period
+life goal that Align program may help achieve: I want to become a full stack engineer
 computer make and model: Mac Book Pro 2017
-Your computer OS incuding version: macOS Catalina Version 10.15.7 
+Your computer OS including version: macOS Catalina Version 10.15.7
 How much RAM: 8GB RAM
 How much disk space: 128G
 
