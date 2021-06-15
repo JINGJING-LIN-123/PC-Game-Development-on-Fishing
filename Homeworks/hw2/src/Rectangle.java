@@ -1,15 +1,25 @@
 import java.util.NoSuchElementException;
 
-// create a class Rectangle
+/**
+ * create a class Rectangle
+ * @author jingjing lin
+ * @version 1.0
+ * @since 2021-05-14
+ */
 public class Rectangle {
     private int x;
     private  int y;
     private int height;
     private int width;
 
-  /*Write a constructor that creates a rectangle using the x, y coordinates of its lower left corner,
+  /**
+  *Write a constructor that creates a rectangle using the x, y coordinates of its lower left corner,
   its width and its height in that order.
   *if the height or width is small or equal to zero, then, throw a illegal argument Exception
+   * @param x x the coordinates of its lower left corner
+   * @param y y the coordinates of its lower left corner
+   * @param width the rectangle's width
+   * @param height the rectangle's height
   */
   public Rectangle(int x, int y, int width, int height) {
       if(height <= 0 || width <= 0) {
@@ -21,10 +31,11 @@ public class Rectangle {
       this.width = width;
   }
 
-  /*Write a method overlap(Rectangle other).
-  *return false for the case that this rectangle does not overlaps with others.
-  * return yes else false cases.
-  */
+  /**
+   * Write a method overlap(Rectangle other).
+   * @param other input other rectangle
+   * @return boolean This returns if it is overlap
+   */
   public boolean overlap(Rectangle other) {
       if(other.x+other.width <= this.x) {
           return false;
@@ -39,10 +50,11 @@ public class Rectangle {
       }
   }
 
-  /*Write a method intersect(Rectangle other).
-  *if there is no intersect, then throw new NoSuchElementException
-  *find the max of x, y and min of height and width, and then do the calculation
-  */
+  /**
+   *Write a method intersect(Rectangle other).
+   * @param other input other rectangle
+   * @return Rectangle. Rectangle of intersect
+   */
   public Rectangle intersect(Rectangle other) {
       if(!overlap(other)) {
           throw new NoSuchElementException("No intersect!");
@@ -56,9 +68,11 @@ public class Rectangle {
       }
   }
 
-  /*Write a method union(Rectangle other).
-  *find the min of x, y and the max of height and width and then do the calculation.
-  */
+  /**
+  *Write a method union(Rectangle other).
+   * @param other input other rectangle
+   * @return Rectangle. Rectangle of union
+   */
   public Rectangle union(Rectangle other) {
       int u_x = Math.min(this.x, other.x);
       int u_y = Math.min(this.y, other.y);
@@ -68,7 +82,11 @@ public class Rectangle {
       return rec;
   }
 
-  //Write a method toString that returns a String.
+    /**
+     *  Write a method toString that returns a String.
+     * @return String This is print out
+     */
+
     @Override
     public String toString() {
       return "x:" + this.x + ", y:" + this.y + ", w:" + this.width +", h:" +this.height;
