@@ -16,7 +16,7 @@ public class RectangleTest {
         rec = new Rectangle(0, 0, 10, 10);
     }
 
-// test for Negative width and Height
+    // test for Negative width and Height
     @Test(expected = IllegalArgumentException.class)
     public void testNegativeWidth() throws Exception {
         rec = new Rectangle(0, 0, -2, 2);
@@ -27,7 +27,7 @@ public class RectangleTest {
         rec = new Rectangle(0, 0, 2, -2);
     }
 
-// test for overlap
+    // test for overlap
     @Test
     public void testOverlap1() throws Exception {
         Rectangle rec2 = new Rectangle(5, 5, 10, 10);

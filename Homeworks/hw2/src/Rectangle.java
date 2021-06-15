@@ -7,10 +7,10 @@ public class Rectangle {
     private int height;
     private int width;
 
-/*Write a constructor that creates a rectangle using the x, y coordinates of its lower left corner,
-its width and its height in that order.Creating a rectangle with non-positive width or height should
-not be allowed, although x and y are allowed to be negative.
- */
+  /*Write a constructor that creates a rectangle using the x, y coordinates of its lower left corner,
+  its width and its height in that order.
+  *if the height or width is small or equal to zero, then, throw a illegal argument Exception
+  */
   public Rectangle(int x, int y, int width, int height) {
       if(height <= 0 || width <= 0) {
           throw new IllegalArgumentException("Height or width should be non-positive!");
@@ -21,10 +21,10 @@ not be allowed, although x and y are allowed to be negative.
       this.width = width;
   }
 
-/*Write a method overlap(Rectangle other).
-This method should return true if this rectangle overlaps with other, false otherwise.
-Rectangles that touch each other are not considered to be overlapping.
- */
+  /*Write a method overlap(Rectangle other).
+  *return false for the case that this rectangle does not overlaps with others.
+  * return yes else false cases.
+  */
   public boolean overlap(Rectangle other) {
       if(other.x+other.width <= this.x) {
           return false;
@@ -39,10 +39,10 @@ Rectangles that touch each other are not considered to be overlapping.
       }
   }
 
-/*Write a method intersect(Rectangle other).
-This method should return a Rectangle object that represents the overlap of the two rectangles.
-If no intersection exists, it should throw a NoSuchElementException with a helpful message.
- */
+  /*Write a method intersect(Rectangle other).
+  *if there is no intersect, then throw new NoSuchElementException
+  *find the max of x, y and min of height and width, and then do the calculation
+  */
   public Rectangle intersect(Rectangle other) {
       if(!overlap(other)) {
           throw new NoSuchElementException("No intersect!");
@@ -56,10 +56,9 @@ If no intersection exists, it should throw a NoSuchElementException with a helpf
       }
   }
 
-/*Write a method union(Rectangle other).
-This method returns a Rectangle object that represents the union of this rectangle and the other rectangle.
-The union is the smallest rectangle that contains both rectangles. Note that unlike the intersection, the union always exists.
- */
+  /*Write a method union(Rectangle other).
+  *find the min of x, y and the max of height and width and then do the calculation.
+  */
   public Rectangle union(Rectangle other) {
       int u_x = Math.min(this.x, other.x);
       int u_y = Math.min(this.y, other.y);
@@ -69,7 +68,7 @@ The union is the smallest rectangle that contains both rectangles. Note that unl
       return rec;
   }
 
-//Write a method toString that returns a String.
+  //Write a method toString that returns a String.
     @Override
     public String toString() {
       return "x:" + this.x + ", y:" + this.y + ", w:" + this.width +", h:" +this.height;
