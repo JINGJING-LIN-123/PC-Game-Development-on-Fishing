@@ -100,13 +100,14 @@ public class SListImpl implements SList {
     public SList oddWords(){
         SList list = new SListImpl();
         Node traversePtr = head;
-
+        int count = 0;
         while(traversePtr != null) { // we jump out of the loop when we're at the null ptr
-            if(traversePtr.val.length() % 2 == 1){
+            if(count % 2 == 1){
                 list.add(traversePtr.val);
             }
             // jump to the next node
             traversePtr = traversePtr.next;
+            count++;
         }
         return list;
     }
@@ -115,13 +116,14 @@ public class SListImpl implements SList {
     public SList evenWords(){
         SList list = new SListImpl();
         Node traversePtr = head;
-
+        int count = 0;
         while(traversePtr != null) { // we jump out of the loop when we're at the null ptr
-            if(traversePtr.val.length() % 2 == 0){
+            if(count % 2 == 0){
                 list.add(traversePtr.val);
             }
             // jump to the next node
             traversePtr = traversePtr.next;
+            count++;
         }
         return list;
     }
@@ -133,7 +135,7 @@ public class SListImpl implements SList {
         Node traversePtr = head;
 
         while(traversePtr != null) { // we jump out of the loop when we're at the null ptr
-            res = res + traversePtr.toString();
+            res = res + traversePtr.toString() + " ";
             // jump to the next node
             traversePtr = traversePtr.next;
         }
