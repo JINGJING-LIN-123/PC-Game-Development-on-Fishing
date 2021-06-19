@@ -1,5 +1,3 @@
-import java.net.PortUnreachableException;
-
 public class SListTest {
     public static void main(String[] args) {
         SList list = new SListImpl();
