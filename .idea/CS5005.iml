@@ -21,6 +21,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs/lab5/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Labs/lab 6/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs/lab 6/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Homeworks/hw3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homeworks/hw3/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
