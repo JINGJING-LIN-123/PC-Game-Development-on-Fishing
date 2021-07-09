@@ -1,6 +1,6 @@
 public class TopScoreTrackerImpl implements TopScoreTracker {
     private int topM;
-    private OrderedList[] mList;
+    private OrderedList<Run>[] mList;
 
     public TopScoreTrackerImpl(int monthlyTopN, int yearlyTopM) {
         mList = new OrderedListImpl[12];
