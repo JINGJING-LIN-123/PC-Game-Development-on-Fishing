@@ -15,7 +15,7 @@ public class SListImpl implements SList {
 
     @Override
     public boolean add(String val) {
-        Node n=new Node(val, null);
+        Node n = new Node(val, null);
         Node traversePtr = head;
         if(isEmpty()) {
             head = n;
