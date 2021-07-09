@@ -20,7 +20,7 @@ public class TopScoreTrackerImpl implements TopScoreTracker {
 
     @Override
     public String annualReport() {
-        OrderedList yList = new OrderedListImpl<Run>(0);
+        OrderedList<Run> yList = new OrderedListImpl(0);
         for(int i = 0; i < 12; i++) {
             yList.merge(mList[i]);
         }
