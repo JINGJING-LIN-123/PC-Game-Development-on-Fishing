@@ -11,7 +11,7 @@ public class Run {
 
     @Override
     public int compareTo(Run other) {
-        return this.score - other.score;
+        return this.score-other.score;
     }
 
     @Override

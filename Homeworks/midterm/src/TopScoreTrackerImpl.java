@@ -5,7 +5,7 @@ public class TopScoreTrackerImpl implements TopScoreTracker {
     public TopScoreTrackerImpl(int monthlyTopN, int yearlyTopM) {
         mList = new OrderedListImpl[12];
         for(int i = 0; i < 12; i++) {
-            mList[i] = new OrderedListImpl<Run>(monthlyTopN);
+            mList[i] = new OrderedListImpl(monthlyTopN);
         }
         topM = yearlyTopM;
     }
@@ -20,7 +20,7 @@ public class TopScoreTrackerImpl implements TopScoreTracker {
 
     @Override
     public String annualReport() {
-        OrderedList<Run> yList = new OrderedListImpl<Run>(0);
+        OrderedList yList = new OrderedListImpl<Run>(0);
         for(int i = 0; i < 12; i++) {
             yList.merge(mList[i]);
         }
