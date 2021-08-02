@@ -141,6 +141,10 @@ public class MarbleSolitaireControllerImplTest {
                         "    o o o    \n" +
                         "    o o o    \n" +
                         "Score: 32\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
+                        "The column number of the position from where a marble is to be moved:\n" +
+                        "The row number of the position to where a marble is to be moved:\n" +
+                        "The column number of the position to where a marble is to be moved:\n" +
                         "    o o o    \n" +
                         "    o _ o    \n" +
                         "o o o _ o o o\n" +
@@ -149,6 +153,7 @@ public class MarbleSolitaireControllerImplTest {
                         "    o o o    \n" +
                         "    o o o    \n" +
                         "Score: 31\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
                         "Game quit!\n" +
                         "    o o o    \n" +
                         "    o _ o    \n" +
@@ -176,7 +181,12 @@ public class MarbleSolitaireControllerImplTest {
                         "    o o o    \n" +
                         "    o o o    \n" +
                         "Score: 32\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
+                        "The column number of the position from where a marble is to be moved:\n" +
+                        "The row number of the position to where a marble is to be moved:\n" +
+                        "The column number of the position to where a marble is to be moved:\n" +
                         "Invalid move. Play again.\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
                         "Game quit!\n" +
                         "    o o o    \n" +
                         "    o o o    \n" +
@@ -204,8 +214,14 @@ public class MarbleSolitaireControllerImplTest {
                         "    o o o    \n" +
                         "    o o o    \n" +
                         "Score: 32\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
+                        "The column number of the position from where a marble is to be moved:\n" +
+                        "The row number of the position to where a marble is to be moved:\n" +
+                        "The column number of the position to where a marble is to be moved:\n" +
                         "Invalid input. Input again.\n" +
+                        "The column number of the position to where a marble is to be moved:\n" +
                         "Invalid input. Input again.\n" +
+                        "The column number of the position to where a marble is to be moved:\n" +
                         "    o o o    \n" +
                         "    o _ o    \n" +
                         "o o o _ o o o\n" +
@@ -214,6 +230,7 @@ public class MarbleSolitaireControllerImplTest {
                         "    o o o    \n" +
                         "    o o o    \n" +
                         "Score: 31\n" +
+                        "The row number of the position from where a marble is to be moved:\n" +
                         "Game quit!\n" +
                         "    o o o    \n" +
                         "    o _ o    \n" +

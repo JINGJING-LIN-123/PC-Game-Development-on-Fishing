@@ -44,6 +44,37 @@ public class MarbleSolitaireControllerImpl implements MarbleSolitaireController 
             while(!validmove) {
                 int i = 0;
                 while (i < 4) {
+                    switch (i) {
+                        case 0:
+                            try {
+                                this.ap.append("The row number of the position from where a marble is to be moved:\n");
+                            } catch (Exception e) {
+                                throw new IllegalStateException();
+                            }
+                            break;
+                        case 1:
+                            try {
+                                this.ap.append("The column number of the position from where a marble is to be moved:\n");
+                            } catch (Exception e) {
+                                throw new IllegalStateException();
+                            }
+                            break;
+                        case 2:
+                            try {
+                                this.ap.append("The row number of the position to where a marble is to be moved:\n");
+                            } catch (Exception e) {
+                                throw new IllegalStateException();
+                            }
+                            break;
+                        case 3:
+                            try {
+                                this.ap.append("The column number of the position to where a marble is to be moved:\n");
+                            } catch (Exception e) {
+                                throw new IllegalStateException();
+                            }
+                            break;
+                        default: break;
+                    }
                     if (scan.hasNextInt()) {
                         int temp = scan.nextInt();
                         if (temp > 0) {
