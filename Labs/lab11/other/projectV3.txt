@@ -1,0 +1,93 @@
+1. The overall topic of the project (a game, an inventory database, a music classifier, a tool to defeat "captcha"s involving stop lights, whatever), a clever algorithm to traverse a certain type of tree -- whatever!). Try to choose something that is authentically interesting to YOU.
+Fishing Game
+Fishing by the sea with a fishing rod
+Get point when catch a fish
+Different kinds of fishes are moving around
+Each kind has its own value/point
+Using mouse click to play the game
+Leaderboard (top 5 leaders with highest point)
+1 minute to finish the game
+
+
+2. Your likely partner(s), if any. Name(s) if known, ideal number if not.
+Jingjing Lin, Minyi Xu, Yuanqiao Li
+
+
+3. Format (e.g., a desktop app, an Android app, a web site with an embedded Java app? something else?).
+a desktop app
+
+
+4. Your current best estimate of how many person-hours will be required to complete your project, broken down as follows:
+ - defining     4hr x 3
+ - designing   10 hr x 3
+ - researching 30 hr x 3
+ - implementing 40 hr x 3
+ - testing 15 hr x 3
+ - debugging 30 hr x 3
+and a GRAND TOTAL. 129 hr x 3 = 387 hr
+
+
+5. One thing you think you may need to learn in order to complete the project.
+ MVC control with mouse and keyboard is the part I think I need to learn in order to complete the project.
+
+
+6: Update for the project:
+ Until the recent meeting, we break the project equal to 3 parts(since we are team 3 people).
+    * We are using Model View and Controller to build the structure.
+    however, in order to divided in equal, we did some exchanges. Me, Jingjing are exchange some portions with Yuanqiao.
+        Each one of our team incharge one.
+        View: Jingjing lin
+           base files:
+              Background x 2
+              Homeview
+              Music
+              Score (Models, exchange from models parts)
+              Timer (Models, exchange from models parts)
+              ***tbd(some addon will install later once we finished build the base game and run the game)
+
+        COntroller: Minyi Xu
+           base files:
+           Home button
+           click for the hook
+           click for the music button
+           Controller will incharge of Test because the workload is smaller than other two parts.
+        Models: Yuanqiao li
+           base files:
+           Fish ( in charge of view in this part because the files is togather)
+           homeModel
+           Hook
+           Husky
+           Line( in charge of view in this part because the files is togather)
+
+ The progress of the program:
+ We gave generated 2D background and decided each position of the icons.
+ we have found all parts that needed for the games (fishes, hook, and some others)
+
+Plan for this weekend:
+  we can genereate the base game, or at least the fishing part can run. no bother with other details.
+
+  7. progress v3:
+  View: Jingjing lin----(done) wait for model and controller to run the code
+                base files:
+                   Background x 2
+                   Homeview
+                   Music
+                   Score (Models, exchange from models parts)
+                   Timer (Models, exchange from models parts)
+                   ***tbd(some addon will install later once we finished build the base game and run the game)
+   COntroller: Minyi Xu---(on progress)
+             base files:
+             Home button
+             click for the hook
+             click for the music button
+             Controller will incharge of Test because the workload is smaller than other two parts. (not yet)
+          Models: Yuanqiao li---(on progress)
+             base files:
+             Fish ( in charge of view in this part because the files is togather)  (on progress)
+             homeModel (done)
+             Hook  (done)
+             Husky  (done)
+             Line( in charge of view in this part because the files is togather) (on progress)
+
+    Plan for this weekend:
+      we will have our version 1 done by the end of this weekend. and will meet again for the following adding.
