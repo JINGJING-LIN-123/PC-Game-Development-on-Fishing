@@ -1,30 +1,26 @@
 /**
- * The class GListImp implements GList interface.
+ * The class nonEmptyGList implements non empty GList interface.
  *
  * @author Jingjing Lin
  * @version 1.0
  * @since 06/24/2021
  * @param <G> the data type of val
  */
-public class GListImp<G> implements GList<G> {
+public class nonEmptyGList<G> implements GList<G> {
     // Only need the head as the member varialbe.
     // As long as I have the head, I'll be able find
     // all the nodes, following the next pointers.
     public GNode<G> head;
 
-    // creates an empty linked list
-    public GListImp() {
-        head = null;
-    }
 
     // creates a linked list with head n
-    public GListImp(G val) {
+    public nonEmptyGList(G val) {
         GNode<G> n = new GNode<G>(val, null);
         head = n;
     }
 
     // creates a linked list as a copy
-    public GListImp(GListImp<G> list) {
+    public nonEmptyGList(nonEmptyGList<G> list) {
         this.head = list.getHead();
     }
 
@@ -46,16 +42,9 @@ public class GListImp<G> implements GList<G> {
      */
     @Override
     public GList<G> add(G val){ // Add val to end of list.
-        GNode<G> n=new GNode<G>(val, null);
-        if(isEmpty()) {
-            head = n;
-        } else if (head.next == null) {
-            head.next = n;
-        } else {
-            getNext().add(val);
-        }
-        return this;
-
+        nonEmptyGList<G> list = new nonEmptyGList<G>(this);
+        list.head.next = getNext().add(val).getHead();
+        return list;
     }
 
     /**
@@ -65,11 +54,7 @@ public class GListImp<G> implements GList<G> {
      */
     @Override
     public int size() {
-        if(isEmpty()) {
-            return 0;
-        } else {
-            return getNext().size() + 1;
-        }
+        return getNext().size() + 1;
     }
 
     /**
@@ -96,11 +81,12 @@ public class GListImp<G> implements GList<G> {
      */
     @Override
     public GList<G> getNext() {
-        if(isEmpty()) {
-            return null;
-        } else {
-            GListImp<G> list = new GListImp<G>(this);
+        if (head.next != null) {
+            nonEmptyGList<G> list = new nonEmptyGList<G>(this);
             list.head = list.head.next;
+            return list;
+        } else {
+            emptyGList<G> list = new emptyGList<G>();
             return list;
         }
     }
@@ -111,7 +97,7 @@ public class GListImp<G> implements GList<G> {
      */
     @Override
     public boolean isEmpty() {
-        return head == null;
+        return false;
     }
 
     /**
@@ -121,9 +107,7 @@ public class GListImp<G> implements GList<G> {
      */
     @Override
     public int find(G val) {
-        if(isEmpty()) {
-            return -1;
-        } else if (val == head.val) {
+        if (val == head.val) {
             return 0;
         } else {
             int index = getNext().find(val);
@@ -145,9 +129,7 @@ public class GListImp<G> implements GList<G> {
         if(index <0 || index >= size()) {
             throw new IllegalArgumentException();
         }
-        if (isEmpty()) {
-            return this;
-        } else if (index == 0) {
+        if (index == 0) {
             head = head.next;
             return this;
         } else {
