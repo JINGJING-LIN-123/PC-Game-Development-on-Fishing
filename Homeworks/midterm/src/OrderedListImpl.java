@@ -47,10 +47,10 @@ public class OrderedListImpl<E extends Comparable<E>> implements OrderedList<E> 
             return;
         }
         while(temp != null) {
-            if(temp.data <= val && (temp.next == null || temp.next.data > val)) {
+            if(temp.data.compareTo(val) <= 0 && (temp.next == null || temp.next.data.compareTo(val) > 0)) {
                 node.next = temp.next;
                 temp.next = node;
-            } else if (temp.data > val) {
+            } else if (temp.data.compareTo(val) > 0) {
                 node.next = temp;
                 head = node;
             }
@@ -65,10 +65,10 @@ public class OrderedListImpl<E extends Comparable<E>> implements OrderedList<E> 
             return;
         }
         while(temp != null) {
-            if(temp.next != null && temp.next.data == val) {
+            if(temp.next != null && temp.next.data.compareTo(val) == 0) {
                 temp.next = temp.next.next;
                 return;
-            } else if (temp.data == val) {
+            } else if (temp.data.compareTo(val) == 0) {
                 head = temp.next;
                 return;
             }
@@ -82,7 +82,7 @@ public class OrderedListImpl<E extends Comparable<E>> implements OrderedList<E> 
             return;
         } else if(size() < capacity) {
             insert(val);
-        } else if (val > getMin()) {
+        } else if (val.compareTo(getMin()) > 0) {
             insert(val);
             remove(getMin());
         } else {
